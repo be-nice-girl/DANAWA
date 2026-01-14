@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다나와 부동산 | 새솔동 전문</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Sans KR -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
+        .pink-gradient { background: linear-gradient(135deg, #FF85A2 0%, #FFB7C5 100%); }
+        .text-pink-primary { color: #FF85A2; }
+        .bg-pink-primary { background-color: #FF85A2; }
+        .border-pink-primary { border-color: #FF85A2; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+
+                    <span class="text-2xl font-bold text-pink-primary tracking-tight">다나와 부동산</span>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#intro" class="hover:text-pink-primary transition">부동산 소개</a>
+                    <a href="#commercial" class="hover:text-pink-primary transition">상가</a>
+                    <a href="#apartment" class="hover:text-pink-primary transition">아파트</a>
+                    <a href="#officetel" class="hover:text-pink-primary transition">오피스텔</a>
+                    <a href="#tips" class="hover:text-pink-primary transition">부동산 꿀팁</a>
+                    <a href="#tips" class="hover:text-pink-primary transition">부동산 꿀팁</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2 text-slate-600 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <a href="#intro" class="block px-3 py-2 rounded-md hover:bg-pink-50 hover:text-pink-primary">부동산 소개</a>
+                <a href="#commercial" class="block px-3 py-2 rounded-md hover:bg-pink-50 hover:text-pink-primary">상가</a>
+                <a href="#apartment" class="block px-3 py-2 rounded-md hover:bg-pink-50 hover:text-pink-primary">아파트</a>
+                <a href="#officetel" class="block px-3 py-2 rounded-md hover:bg-pink-50 hover:text-pink-primary">오피스텔</a>
+                <a href="#tips" class="block px-3 py-2 rounded-md hover:bg-pink-50 hover:text-pink-primary">부동산 꿀팁</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-pink-50 opacity-50"></div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-pink-200 rounded-full blur-3xl opacity-30"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-pink-primary font-bold tracking-widest uppercase mb-4">Songsan Green City Expert</h2>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                새솔동의 모든 공간,<br><span class="text-pink-primary">다나와 부동산</span>이 찾아드립니다
+            </h1>
+            <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
+                상가부터 아파트까지, 새솔동 현지 전문가가 전하는 정직하고 정확한 매물 정보를 지금 바로 확인하세요.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:010-0000-0000" class="px-8 py-4 bg-pink-primary text-white rounded-full font-bold shadow-lg hover:scale-105 transition transform">실시간 전화상담</a>
+                <a href="#intro" class="px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-full font-bold hover:bg-slate-50 transition shadow-sm">오시는 길 확인</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Categories Summary Grid -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+            <a href="#commercial" class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center border-b-4 border-transparent hover:border-pink-primary">
+                <div class="text-3xl mb-3">🏢</div>
+                <h3 class="font-bold group-hover:text-pink-primary">상가</h3>
+            </a>
+            <a href="#apartment" class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center border-b-4 border-transparent hover:border-pink-primary">
+                <div class="text-3xl mb-3">🏘️</div>
+                <h3 class="font-bold group-hover:text-pink-primary">아파트</h3>
+            </a>
+            <a href="#officetel" class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center border-b-4 border-transparent hover:border-pink-primary">
+                <div class="text-3xl mb-3">🛌</div>
+                <h3 class="font-bold group-hover:text-pink-primary">오피스텔</h3>
+            </a>
+            <a href="#tips" class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center border-b-4 border-transparent hover:border-pink-primary">
+                <div class="text-3xl mb-3">💡</div>
+                <h3 class="font-bold group-hover:text-pink-primary">꿀팁</h3>
+            </a>
+            <a href="#intro" class="group bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center border-b-4 border-transparent hover:border-pink-primary">
+                <div class="text-3xl mb-3">👩‍💼</div>
+                <h3 class="font-bold group-hover:text-pink-primary">소개</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Commercial Section -->
+    <section id="commercial" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">추천 상가 정보</h2>
+                    <p class="text-slate-500 font-medium italic">Saesoldong Commercial Space</p>
+                </div>
+                <div class="w-12 h-1 bg-pink-primary"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-sm">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400">
+                        [수변상가 추천 매물 이미지]
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-pink-primary bg-pink-100 px-2 py-1 rounded mb-3 inline-block">임대/매매</span>
+                        <h4 class="text-xl font-bold mb-2">수변공원 인근 카페 무권리</h4>
+                        <p class="text-slate-600 text-sm mb-4">조망이 우수한 1층 상가로 가시성이 뛰어납니다.</p>
+                        <p class="font-bold text-lg">보증금 3,000 / 월 180</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-sm">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400">
+                        [중심상가 추천 매물 이미지]
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-blue-500 bg-blue-100 px-2 py-1 rounded mb-3 inline-block">분양</span>
+                        <h4 class="text-xl font-bold mb-2">중심상가 대단지 배후 수요</h4>
+                        <p class="text-slate-600 text-sm mb-4">메인 횡단보도 앞 코너 자리로 유동인구 최상입니다.</p>
+                        <p class="font-bold text-lg">문의 시 상세 상담</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden hover:-translate-y-2 transition duration-300 shadow-sm">
+                    <div class="h-48 bg-slate-200 flex items-center justify-center text-slate-400">
+                        [병원/학원 추천 매물 이미지]
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-bold text-pink-primary bg-pink-100 px-2 py-1 rounded mb-3 inline-block">임대</span>
+                        <h4 class="text-xl font-bold mb-2">학원/병원 입점 최적화 상가</h4>
+                        <p class="text-slate-600 text-sm mb-4">주차 공간이 넉넉한 신축 건물 고층부 매물입니다.</p>
+                        <p class="font-bold text-lg">보증금 5,000 / 월 250</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apartment & Officetel (Side by side on Desktop) -->
+    <section class="py-20 bg-pink-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Apartment -->
+                <div id="apartment">
+                    <h2 class="text-3xl font-bold mb-8 flex items-center gap-2">
+                        <span class="w-2 h-8 bg-pink-primary block"></span>
+                        아파트 단지 정보
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="bg-white p-5 rounded-xl flex justify-between items-center shadow-sm">
+                            <div>
+                                <h4 class="font-bold text-lg">송산그린시티 세영리첼</h4>
+                                <p class="text-sm text-slate-500">최근 실거래가: 5.8억 ~ 6.2억</p>
+                            </div>
+                            <span class="text-pink-primary font-medium">매물 12건</span>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl flex justify-between items-center shadow-sm">
+                            <div>
+                                <h4 class="font-bold text-lg">대방노블랜드 (1~6차)</h4>
+                                <p class="text-sm text-slate-500">인기 대단지, 평형대 다양</p>
+                            </div>
+                            <span class="text-pink-primary font-medium">매물 45건</span>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl flex justify-between items-center shadow-sm">
+                            <div>
+                                <h4 class="font-bold text-lg">요진 와이시티</h4>
+                                <p class="text-sm text-slate-500">단지 앞 편의시설 우수</p>
+                            </div>
+                            <span class="text-pink-primary font-medium">매물 8건</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Officetel -->
+                <div id="officetel">
+                    <h2 class="text-3xl font-bold mb-8 flex items-center gap-2">
+                        <span class="w-2 h-8 bg-pink-primary block"></span>
+                        오피스텔/수익형
+                    </h2>
+                    <div class="bg-white rounded-2xl p-8 shadow-sm">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="bg-pink-100 p-3 rounded-full text-pink-primary">🏠</div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1 text-slate-900">1인 가구 실거주 최적화</h4>
+                                <p class="text-slate-600">새솔동 중심에 위치한 풀옵션 오피스텔 매물을 확보하고 있습니다.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-50 p-3 rounded-full text-blue-500">📈</div>
+                            <div>
+                                <h4 class="font-bold text-xl mb-1 text-slate-900">소액 투자 상담</h4>
+                                <p class="text-slate-600">수익률 분석부터 공실 관리까지 전문적으로 케어해드립니다.</p>
+                            </div>
+                        </div>
+                        <button class="w-full mt-8 py-3 border-2 border-pink-primary text-pink-primary font-bold rounded-xl hover:bg-pink-primary hover:text-white transition">오피스텔 매물 더보기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">다나와 부동산 꿀팁</h2>
+                <p class="text-slate-500">새솔동 주민과 예비 입주자를 위한 유용한 정보</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="flex gap-4 p-6 border border-slate-100 rounded-2xl hover:bg-slate-50 transition cursor-pointer group">
+                    <div class="text-4xl">📝</div>
+                    <div>
+                        <h4 class="font-bold text-lg group-hover:text-pink-primary mb-1 transition">부동산 계약 전 확인해야 할 필수 체크리스트</h4>
+                        <p class="text-sm text-slate-500">등기부등본 확인부터 확정일자 받는 법까지!</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 border border-slate-100 rounded-2xl hover:bg-slate-50 transition cursor-pointer group">
+                    <div class="text-4xl">🚌</div>
+                    <div>
+                        <h4 class="font-bold text-lg group-hover:text-pink-primary mb-1 transition">새솔동 광역버스 및 교통망 업데이트 정보</h4>
+                        <p class="text-sm text-slate-500">서울 강남, 사당행 노선 시간표 확인하세요.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 border border-slate-100 rounded-2xl hover:bg-slate-50 transition cursor-pointer group">
+                    <div class="text-4xl">🏢</div>
+                    <div>
+                        <h4 class="font-bold text-lg group-hover:text-pink-primary mb-1 transition">상가 임대차 보호법, 이것만은 꼭 알자</h4>
+                        <p class="text-sm text-slate-500">임차인의 권리 보호를 위한 기초 지식.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 border border-slate-100 rounded-2xl hover:bg-slate-50 transition cursor-pointer group">
+                    <div class="text-4xl">🏡</div>
+                    <div>
+                        <h4 class="font-bold text-lg group-hover:text-pink-primary mb-1 transition">신혼부부 생애최초 주택자금 대출 가이드</h4>
+                        <p class="text-sm text-slate-500">새솔동 아파트 매매를 위한 최적의 금리 찾기.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="intro" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 text-pink-300">다나와 부동산 소개</h2>
+                <p class="text-slate-300 leading-relaxed mb-6">
+                    저희 <strong>다나와 부동산</strong>은 경기도 화성시 새솔동(송산그린시티)에서 
+                    가장 정직하고 발빠른 정보를 제공하기 위해 최선을 다하고 있습니다.<br><br>
+                    단순한 계약 성사가 목적이 아닌, 고객님의 소중한 자산을 지키고 
+                    최적의 라이프 스타일을 제안하는 든든한 파트너가 되겠습니다.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-pink-300">📍</span>
+                        <span>경기도 화성시 수노을중앙로 (새솔동) 00-0</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-pink-300">📞</span>
+                        <a href="tel:010-0000-0000" class="hover:underline">010-0000-0000 / 031-000-0000</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-pink-300">⏰</span>
+                        <span>평일 09:30 - 19:00 / 토요일 10:00 - 17:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="w-full h-80 bg-slate-800 rounded-2xl flex flex-col items-center justify-center border border-slate-700">
+                    <span class="text-4xl mb-4">📍</span>
+                    <p class="text-slate-400 font-bold text-xl">지도 영역 (준비 중)</p>
+                    <p class="text-slate-500 text-sm mt-2 italic">Naver/Kakao Map API 연동 가능</p>
+                </div>
+                <div class="absolute -bottom-6 -right-6 bg-pink-primary p-6 rounded-2xl shadow-xl">
+                    <p class="font-bold text-sm">대표 공인중개사</p>
+                    <p class="text-2xl font-bold">홍 길 동</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-6">
+                <div class="w-8 h-8 bg-pink-primary rounded-md flex items-center justify-center text-white font-bold text-sm">D</div>
+                <span class="text-xl font-bold text-pink-primary">다나와 부동산</span>
+            </div>
+            <p class="text-slate-400 text-sm mb-2">상호: 다나와부동산 공인중개사사무소 | 대표: 홍길동</p>
+            <p class="text-slate-400 text-sm mb-6">등록번호: 제12345-0000-0000호 | 사업자번호: 000-00-00000</p>
+            <p class="text-slate-300 text-xs">© 2024 Danawa Real Estate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button for Mobile -->
+    <a href="tel:010-0000-0000" class="md:hidden fixed bottom-6 right-6 w-16 h-16 bg-pink-primary text-white rounded-full shadow-2xl flex items-center justify-center text-2xl z-50 animate-bounce">
+        📞
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
