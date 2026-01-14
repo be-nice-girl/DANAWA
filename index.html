@@ -20,6 +20,7 @@
         .bg-pink-primary { background-color: #FF85A2; }
         .border-pink-primary { border-color: #FF85A2; }
     </style>
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=5tvp9qccxu"></script>
 </head>
 <body class="bg-slate-50 text-slate-800">
 
@@ -288,11 +289,39 @@
                 </div>
             </div>
             <div class="relative">
-                <div class="w-full h-80 bg-slate-800 rounded-2xl flex flex-col items-center justify-center border border-slate-700">
+
+                <div id="map" class="w-full h-80 rounded-2xl shadow-xl border border-slate-700"></div>
+
+<script>
+    // 네이버 지도 실행 스크립트
+    window.onload = function() {
+        // 다나와 부동산의 실제 좌표 (위도, 경도)를 입력하세요
+        // 예시 좌표는 새솔동 중심부 근처입니다.
+        var saesolLocation = new naver.maps.LatLng(37.1904082, 126.8248431); 
+        
+        var mapOptions = {
+            center: saesolLocation,
+            zoom: 17, // 확대 정도
+            zoomControl: true
+        };
+
+        var map = new naver.maps.Map('map', mapOptions);
+
+        // 우리 사무실 위치에 마커(핀) 꽂기
+        var marker = new naver.maps.Marker({
+            position: saesolLocation,
+            map: map,
+            title: '다나와 부동산'
+        });
+    }
+</script>
+                
+                //네이버지도
+                <!-- <div class="w-full h-80 bg-slate-800 rounded-2xl flex flex-col items-center justify-center border border-slate-700">
                     <span class="text-4xl mb-4">📍</span>
                     <p class="text-slate-400 font-bold text-xl">지도 영역</p>
                     <p class="text-slate-500 text-sm mt-2 italic">Naver/Kakao Map API 연동 가능</p>
-                </div>
+                </div> -->
                 <div class="absolute -bottom-6 -right-6 bg-pink-primary p-6 rounded-2xl shadow-xl">
                     <p class="font-bold text-sm">대표 공인중개사</p>
                     <p class="text-2xl font-bold">오 영 희</p>
@@ -338,6 +367,7 @@
 </body>
 
 </html>
+
 
 
 
