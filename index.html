@@ -412,6 +412,27 @@
             title: '다나와 부동산'
         });
     }
+
+
+ // Mobile Menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        // Modal Functions (핵심 보완사항)
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        window.addEventListener('click', function(e) {
+            if (e.target.id.includes('modal')) closeModal(e.target.id);
+        });
+
+    
 </script>
                 
 
@@ -460,6 +481,7 @@
 </body>
 
 </html>
+
 
 
 
