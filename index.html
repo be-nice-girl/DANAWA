@@ -13,12 +13,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Noto Sans KR -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
+     <style>
         body { font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth; }
-        .pink-gradient { background: linear-gradient(135deg, #FF85A2 0%, #FFB7C5 100%); }
         .text-pink-primary { color: #FF85A2; }
         .bg-pink-primary { background-color: #FF85A2; }
         .border-pink-primary { border-color: #FF85A2; }
+        .hover-pink:hover { background-color: #ff7494; }
+        
+        /* Modal Custom Scrollbar */
+        .modal-content::-webkit-scrollbar { width: 6px; }
+        .modal-content::-webkit-scrollbar-track { background: #f1f1f1; }
+        .modal-content::-webkit-scrollbar-thumb { background: #FF85A2; border-radius: 10px; }
+        
+        /* Smooth Fade In Animation */
+        .animate-fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=5tvp9qccxu"></script>
 </head>
@@ -448,6 +460,7 @@
 </body>
 
 </html>
+
 
 
 
